@@ -1,4 +1,4 @@
-# Github Pages Directory Listing
+# Custom branded fork of [github-pages-directory-listing](https://github.com/jayanta525/github-pages-directory-listing)
 [![main](https://github.com/jayanta525/github-pages-directory-listing/actions/workflows/main.yml/badge.svg)](https://github.com/jayanta525/github-pages-directory-listing/actions/workflows/main.yml)
 [![license](https://img.shields.io/github/license/jayanta525/github-pages-directory-listing)](https://github.com/jayanta525/github-pages-directory-listing/blob/main/LICENSE)
 [![Paypal Donate](https://img.shields.io/badge/donate-paypal-00457c.svg?logo=paypal&style=plastic)](https://www.paypal.me/jayanta525)
@@ -27,17 +27,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          ref: dummy-data    #checkout different branch
+          ref: main    #checkout different branch
 
       - name: Generate Directory Listings
-        uses: jayanta525/github-pages-directory-listing@v3.0.0
+        uses: steccah/github-pages-directory-listing@v4.0.0
         with:
-          FOLDER: data      #directory to generate index
+          FOLDER: .      #directory to generate index
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: 'data'      # upload generated folder
+          path: '.'      # upload generated folder
   
   deploy:
     needs: pages-directory-listing
@@ -78,7 +78,7 @@ jobs:
 #### Choosing a folder to generate indexing
 ```
       - name: Generate Directory Listings
-        uses: jayanta525/github-pages-directory-listing@v2.0.0
+        uses: steccah/github-pages-directory-listing@v4.0.0
         with:
           FOLDER: data    #directory to generate index
 ```

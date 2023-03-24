@@ -199,6 +199,12 @@
         ]
     },
     {
+        "icon": "nt",
+        "extension": [
+            ".nt"
+        ]
+    },
+    {
         "icon": "package",
         "extension": [
             ".pkg",
